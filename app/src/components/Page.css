@@ -1,134 +1,262 @@
-
-
 .rectangle6 {
-    position: absolute;
-    top: 12%;
-    left:9%;
-    width: 20%;
-    height: 80%;
-    background-color: rgba(248, 247, 249, 0.1);
-    border-radius: 15px;
-    flex-direction: column;
-    padding: 6px;
-    overflow-y:auto ;
-   
-    
-  }
-  .chatbox{
-    border:2px solid transparent;
-    width:90%;
-    height:13%;
-    border-radius: 10px;
-    margin:9px;
-    padding:6px;
-    background-color:rgba(248, 247, 249, 0.3);
-    justify-content: center;
-    
-    flex-direction: column;
-
+  position: absolute;
+  top: 12%;
+  left: 9%;
+  width: 30%;
+  height: 80%;
+  background-color: rgba(248, 247, 249, 0.1);
+  scrollbar-width: none; /* For Firefox */
+  border-radius: 15px;
+  padding: 0;
+  overflow-y: auto;
 }
-.chatbox div{
-    justify-content: space-between;
+.rectangle6::-webkit-scrollbar {
+  width: 0px; /* Width of the scrollbar */
+  background: transparent; /* Hide background */
 }
 
-.chatbox:hover{
-    background-color: rgba(248, 247, 249, 0.5);
-    cursor: pointer;
+.square {
+  width: 100%; /* Make squares responsive */
+  padding-top: 100%; /* Aspect ratio of 1:1 */
+  position: relative; /* Position for absolute child */
+  overflow: hidden; /* Hide overflow */
+  border-radius: 15px; /* Rounded edges */
 }
-.text{
-    border: 2px solid  rgba(248, 247, 249, 0.5);
-    width:35%;
-    padding:10px;
-    border-radius: 10px;
-    margin: 0px 12px;
-    
-    
+
+.square img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the entire square */
 }
-.right{
-    float: right;
-    clear: both;
-    background: #0d6efd40
+
+.square-name {
+  position: absolute;
+  bottom: 10px; /* Position above the bottom */
+  left: 10px; /* Adjust as needed */
+  color: white; /* Text color */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 5px; /* Padding for the text */
+  border-radius: 5px; /* Rounded edges for the background */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s; /* Smooth transition */
 }
-.left{
-    float: left;
-    clear: both;
-    background: #0000005c;
+
+.square:hover .square-name {
+  opacity: 1; /* Show the name on hover */
+}
+
+.chatbox {
+  border: 2px solid transparent;
+  width: 90%;
+  height: 13%;
+  border-radius: 10px;
+  margin: 9px;
+  padding: 6px;
+  background-color: rgba(248, 247, 249, 0.3);
+  justify-content: center;
+
+  flex-direction: column;
+}
+.chatbox div {
+  justify-content: space-between;
+}
+
+.chatbox:hover {
+  background-color: rgba(248, 247, 249, 0.5);
+  cursor: pointer;
+}
+.text {
+  border: 2px solid rgba(248, 247, 249, 0.5);
+  width: 55%;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0px 12px;
 }
 .rectangle1 {
-    position: absolute;
-    left: 43%;
-    top: 12%;
-    width: 50%;
-    height: 80%;
-    border-radius: 10px;
-    background-color: rgba(255 255 255 / 90%);
-    box-shadow: 20px 20px 4px 0px #00000040;
-    padding:14px 14px 5px 20px;
-   
-  }
- 
-
-  .send{
-    position: absolute;
-    bottom: 0%;
-    width: 90%;
-    justify-content: space-between;
-    align-items: center;
+  position: absolute;
+  left: 43%;
+  top: 12%;
+  width: 50%;
+  height: 80%;
+  border-radius: 10px;
+  background-color: rgba(255 255 255 / 90%);
+  box-shadow: 20px 20px 4px 0px #00000040;
+  padding: 14px 14px 5px 20px;
+}
+.send {
+  position: absolute;
+  bottom: 0%;
+  width: 95%;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.send img{
-    height: 35px;
-    width: 40px;
+.send img {
+  height: 35px;
+  width: 40px;
+}
 
+.chat {
+  padding-right: 0px;
+  padding-bottom: 10px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  height: 90%; /* Adjust height as needed */
+  scrollbar-width: none; /* For Firefox */
+  scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1); /* Customize scrollbar colors for Firefox */
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+.chat::-webkit-scrollbar {
+  width: 0px; /* Width of the scrollbar */
+  background: transparent; /* Hide background */
+}
+
+.chat::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5); /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Round edges */
+}
+
+/* Hide scrollbar when not scrolling */
+.chat.hidden-scrollbar::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+.chat.hidden-scrollbar {
+  scrollbar-width: none; /* For Firefox */
+}
+
+/* .send1 {
+  width: 97%;
+  padding: 10px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  background-color: rgb(225, 219, 219);
+  max-height: 35px;
+  resize: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: center;
+}
+.send1::-webkit-scrollbar {
+  display: none;
 }
 
 .send1 {
-    width: 97%;
-    padding: 10px;
-    border-radius: 4px;
-    outline: none;
-    border: none;
-    background-color: rgb(225, 219, 219);
-    max-height: 35px; 
-    resize: none; 
-    overflow-y: auto; 
-    overflow-x: hidden; 
-    white-space: pre-wrap; 
-    word-wrap: break-word; 
-    text-align:  center 
+  scrollbar-width: none;
 }
-  .send1::-webkit-scrollbar {
-    display: none; 
-  }
-  
-  .send1 {
-    scrollbar-width: none; 
-  }
-  .send1:focus{
-    text-align: left;
-  }
-  
-  
+.send1:focus {
+  text-align: left;
+} */
 
-
-@media screen and (max-width:520px){
-    .rectangle1{
-        display: none;
-    }
-    .rectangle6{
-        width: 80%;
-        left:2%
-        
-    }
-    .chatbox{
-        flex-direction: column;
-        height: 15%;
-    }
-    
+.send1 {
+  width: 100%; /* Use full width for better alignment */
+  padding: 6px 15px; /* Add more padding for comfort */
+  border-radius: 24px; /* Softer rounded corners */
+  outline: none;
+  border: 1px solid #ccc; /* Add a subtle border */
+  background-color: #f5f5f5; /* Light background for better readability */
+  font-size: 1rem; /* Increase font size for clarity */
+  max-height: 40px; /* Allow more height for input */
+  resize: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+  transition: border-color 0.2s ease-in-out; /* Smooth transition for focus */
 }
-@media screen and (max-width:220px){
-    .rectangle6{
-        top:16%
-    }
-    
+
+.send1:focus {
+  text-align: left; /* Align text to left on focus */
+  border: 1px solid #007bff; /* Highlight border on focus */
+  background-color: #fff; /* Make background white on focus */
+}
+
+.send1::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for webkit browsers */
+}
+
+.send1 {
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.send {
+  padding: 10px; /* Add padding for better spacing */
+}
+
+.send1 {
+  width: 100%; /* Take full width of the flex item */
+  max-height: 50px; /* Limit height */
+  resize: none; /* Disable resizing */
+  padding: 10px; /* Add padding for better text entry */
+}
+
+.send1:focus {
+  outline: none; /* Remove default outline on focus */
+  border-color: #007bff; /* Change border color on focus */
+}
+
+.message {
+  max-width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  margin: 8px 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  word-wrap: break-word;
+  position: relative;
+  clear: both;
+}
+
+.right {
+  float: right;
+  background-color: #e3f2fd;
+  color: #333;
+}
+
+.left {
+  float: left;
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin-bottom: 2px;
+}
+
+.timestamp {
+  font-size: 0.75rem;
+  color: #888;
+  margin-top: 6px;
+  text-align: right;
+  position: absolute;
+  bottom: -20px;
+  right: 10px;
+}
+
+@media screen and (max-width: 520px) {
+  .rectangle1 {
+    display: none;
+  }
+  .rectangle6 {
+    width: 80%;
+    left: 2%;
+  }
+  .chatbox {
+    flex-direction: column;
+    height: 15%;
+  }
+}
+@media screen and (max-width: 220px) {
+  .rectangle6 {
+    top: 16%;
+  }
 }

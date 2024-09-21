@@ -1,0 +1,74 @@
+[
+  {
+    "_id": "66ed013011c6abe508da2efe",
+    "name": "baby1",
+    "message": "hi friend",
+    "user": "66eca5d7353ce95fc70bcf00",
+    "timestamp": "2024-09-20T04:59:28.379Z",
+    "__v": 0
+  },
+  {
+    "_id": "66ed01bdf1f6c5cbf796e1bf",
+    "name": "baby1",
+    "message": "hi friend",
+    "user": "66eca5d7353ce95fc70bcf00",
+    "timestamp": "2024-09-20T05:01:49.760Z",
+    "__v": 0
+  },
+  {
+    "_id": "66ed0201e347fc2354c82f89",
+    "name": "baby1",
+    "message": "hi friend",
+    "user": "66eca5d7353ce95fc70bcf00",
+    "timestamp": "2024-09-20T05:02:57.731Z",
+    "__v": 0
+  },
+  {
+    "_id": "66edabe321555ad05edb2d40",
+    "name": "baby1",
+    "message": "hi friend",
+    "user": "66eca5d7353ce95fc70bcf00",
+    "timestamp": "2024-09-20T17:07:47.315Z",
+    "__v": 0
+  },
+  {
+    "_id": "66edabe521555ad05edb2d42",
+    "name": "AI Bot",
+    "message": "Hello! How can I help you today?",
+    "user": "66eca5d7353ce95fc70bcf00",
+    "timestamp": "2024-09-20T17:07:49.170Z",
+    "__v": 0
+  },
+  {
+    "_id": "66edac0a21555ad05edb2d45",
+    "name": "baby1",
+    "message": "i had a blast today",
+    "user": "66eca5d7353ce95fc70bcf00",
+    "timestamp": "2024-09-20T17:08:26.027Z",
+    "__v": 0
+  },
+  {
+    "_id": "66edac0b21555ad05edb2d47",
+    "name": "AI Bot",
+    "message": "I'm glad to hear that you had a great day! It's always a pleasure to hear about people enjoying themselves. Would you like to share any details about what made your day so enjoyable?",
+    "user": "66eca5d7353ce95fc70bcf00",
+    "timestamp": "2024-09-20T17:08:27.815Z",
+    "__v": 0
+  },
+  {
+    "_id": "66edac79b0202a30235c6b95",
+    "name": "baby1",
+    "message": "i had a blast today",
+    "user": "66eca5d7353ce95fc70bcf00",
+    "timestamp": "2024-09-20T17:10:17.471Z",
+    "__v": 0
+  },
+  {
+    "_id": "66edac7bb0202a30235c6b97",
+    "name": "AI Bot",
+    "message": "I'm glad to hear that! It's always great to have a fun and enjoyable day. Could you tell me more about what you did today that made it so enjoyable?",
+    "user": "66eca5d7353ce95fc70bcf00",
+    "timestamp": "2024-09-20T17:10:19.337Z",
+    "__v": 0
+  }
+]

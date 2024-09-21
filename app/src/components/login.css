@@ -1,103 +1,92 @@
 body {
-    height: 100%;                 
-    margin: 0; 
-    background-image: url("login.jpg");
-    background-size: cover;    
-    background-position: center;  
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  height: 100%;
+  margin: 0;
+  background-image: url('./login.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+}
+.user {
+  position: relative;
+  border-bottom: 2px solid white;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.1);
+}
 
-  
-  .container {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 100vh; 
-    color: white;
-  }
-  .user {
-    position: relative;
-    border-bottom: 2px solid white;
-   
-  }
-  
-  .user input {
-    position: relative;
-    z-index: 1;
-  }
- .user span{
-    display: block;
-    background-color: black;
-    transition: width 0.5s; 
-    height: 2px;
-    position: absolute;
-    bottom: -2px; 
-    left: 0;
-    width: 0; 
-  
- }
- .user input:focus~ span{
-    width: 100%;
- }
-  .login {
-    width: 360px;
-    height:70%; 
-    padding: 20px; 
-    border: 1px solid transparent; 
-    border-radius: 14px; 
-   background-color: rgba(248, 247, 249, 0.03);
- box-shadow: 20px 20px rgba(0, 0, 0, 0.3);
-    justify-content: center;
-    font-family: josefin sans;
-    
-   
-  }
-  .login::before {
-    content: "";
-    position: absolute;
-    top: 22%;
-    left: 35%;
-    width: 30%;
-    height: 56%;
-    background-image: url("./Bloom icon.png");
-    background-size: cover;
-    background-position: center;
-    opacity: 0.5; /* adjust the opacity value (0.5) */
-  }
-  .loginname{
-        
-        margin: 7px auto ;
-        font-size: 35px;
-      
-  }
-  input {
-    width: 100%; 
-    padding: 10px; 
-    
-   
-    border-radius: 4px; 
-    top:0;
-    left:0;
-    background: none;
-    outline: none;
-    border: none;
+.user input {
+  position: relative;
+  z-index: 1;
+}
+.user span {
+  display: block;
+  background-color: black;
+  transition: width 0.5s;
+  height: 2px;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+}
+.user input:focus ~ span {
+  width: 100%;
+}
+.login {
+  width: 360px;
+  height: 70%;
+  padding: 20px;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  background-color: rgba(248, 247, 249, 0.03);
+  box-shadow: 20px 20px rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  font-family: josefin sans;
+}
+.login::before {
+  content: '';
+  position: absolute;
+  top: 22%;
+  left: 35%;
+  width: 30%;
+  height: 56%;
+  background-image: url('./Bloom icon.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* adjust the opacity value (0.5) */
+  z-index: -1;
+}
+.loginname {
+  margin: 7px auto;
+  font-size: 45px;
+}
+input {
+  width: 100%;
+  padding: 10px;
 
-  }
-  .btn{
-    border-radius: 10px;
-    margin: 7px auto ;
-    background-color: purple;
-   color: white;
-    background-color: none;
-    
-  }
-  .password{
-  
-    margin: 5px 13px 5px auto;
-  }
-  .create{
-   
-    margin: 7px auto ;
-  }
+  border-radius: 4px;
+  top: 0;
+  left: 0;
+  background: none;
+  outline: none;
+  border: none;
+}
+.btn {
+  border-radius: 10px;
+  margin: 7px auto;
+  color: white;
+  background-color: rgb(83, 1, 83);
+}
+.password {
+  margin: 5px 13px 5px auto;
+}
+.create {
+  margin: 7px auto;
+}
