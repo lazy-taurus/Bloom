@@ -134,8 +134,8 @@ export default function Page({ elementsCount }) {
 
     try {
       const response = await axios.post(
-        // 'https://arjuna-uzmq.onrender.com/api/v1/users/chat',
-        'http://localhost:5000/api/v1/users/chat',
+        'https://arjuna-uzmq.onrender.com/api/v1/users/chat',
+        // 'http://localhost:5000/api/v1/users/chat',
         messageData,
         {
           headers: {
