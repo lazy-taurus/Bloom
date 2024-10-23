@@ -2,6 +2,7 @@ import { memo } from 'react';
 import Register from './components/Register';
 import Login from './components/Login';
 import Page from './components/Page';
+import Dashboard from './components/Dashboard';
 import {
   BrowserRouter as Router,
   Route,
@@ -10,6 +11,7 @@ import {
 } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Utility function to check if the user is logged in (e.g., checking localStorage for token)
 const isAuthenticated = () => {
@@ -34,6 +36,7 @@ const App = memo(function App(props = {}) {
         <Routes>
           {/* Default to login page if root path is selected */}
           <Route path='/' element={<Navigate to='/login' />} />
+          <Route path='/dashboard' element={<Dashboard />} />
 
           {/* Register route - Redirects to /chat if user is already logged in */}
           <Route

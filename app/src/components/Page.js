@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Page.css';
 import Navbar from './Navbar';
+import './MAIN.css';
 import Slidebar from './Slidebar';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -133,8 +134,8 @@ export default function Page({ elementsCount }) {
 
     try {
       const response = await axios.post(
-        'https://arjuna-uzmq.onrender.com/api/v1/users/chat',
-        // 'http://localhost:5000/api/v1/users/chat',
+        // 'https://arjuna-uzmq.onrender.com/api/v1/users/chat',
+        'http://localhost:5000/api/v1/users/chat',
         messageData,
         {
           headers: {
@@ -171,22 +172,11 @@ export default function Page({ elementsCount }) {
 
   return (
     <>
-      <Navbar />
-      {/* <Slidebar /> */}
+      {/* <Navbar /> */}
+      <Slidebar />
       <div className='contanier' style={{ marginTop: '10px' }}>
-        <div className='d-flex flex-wrap rectangle6'>
-          {Array.from({ length: 5 }).map((_, index) => (
-            <div className='col-6 p-2' key={index}>
-              <div className='square'>
-                <img
-                  src='./pic.jpg'
-                  alt='error'
-                  className='img-fluid rounded'
-                />
-                <div className='square-name'>Name {index + 1}</div>
-              </div>
-            </div>
-          ))}
+        <div className='d-flex justify-content-center align-item-center rectangle6'>
+          <img src='/kid.png' alt='avatar' style={{ height: '500px' }} />
         </div>
 
         <div className='rectangle1'>
@@ -195,6 +185,16 @@ export default function Page({ elementsCount }) {
             ref={chatContainerRef}
             style={{ overflowY: 'auto', height: '90%' }}
           >
+            {/* <div className='message text right'>
+              <p className='name'>message.name</p>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates, enim esse! Aspernatur ipsam vel est quibusdam! Reprehenderit perferendis id fuga veniam earum est itaque aliquid sit quaerat quos blanditiis similique, eum nostrum, voluptatibus ipsum quibusdam, exercitationem labore totam maxime quo nemo. Recusandae minus eligendi deleniti non.</p>
+              <p className='timestamp'>22:90</p>
+            </div>
+            <div className='message text left'>
+              <p className='name'>message.name</p>
+              <p>message.message</p>
+              <p className='timestamp'>22:90</p>
+            </div> */}
             {chat.length > 0 ? (
               chat.map((message) =>
                 message.name === name ? (

@@ -1,20 +1,23 @@
 body {
   height: 100%;
   margin: 0;
-  background-image: url('./login.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 .container {
+  background-image: url('./login.jpg');
+  background-size: cover; /* Ensure it covers the whole area */
+  background-position: center center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-attachment: fixed; /* Keep it fixed while scrolling */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh; /* Minimum height to cover viewport */
+  min-width: 100vw; /* Minimum width to cover viewport */
+  overflow: hidden; /* Prevent overflow */
   color: white;
 }
+
 .user {
   position: relative;
   border-bottom: 2px solid white;
@@ -78,12 +81,34 @@ input {
   outline: none;
   border: none;
 }
-.btn {
-  border-radius: 10px;
-  margin: 7px auto;
+.btn1 {
+  display: inline-block;
+  padding: 12px 24px; /* Adjust padding for better spacing */
+  border-radius: 8px; /* Rounded corners */
   color: white;
   background-color: rgb(83, 1, 83);
+  border: none; /* Remove border for a cleaner look */
+  font-size: 16px; /* Font size for better readability */
+  font-weight: 500; /* Slightly bolder text */
+  text-align: center;
+  cursor: pointer; /* Change cursor to pointer */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 7px auto;
 }
+
+.btn1:hover {
+  background-color: rgb(133, 50, 133); /* Lighter shade on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.btn1:active {
+  transform: translateY(0); /* Remove lift on click */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Softer shadow on click */
+  background-color: rgb(63, 0, 63); /* Darker shade when active */
+}
+
 .password {
   margin: 5px 13px 5px auto;
 }

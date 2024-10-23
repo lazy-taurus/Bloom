@@ -1,5 +1,4 @@
 import React from 'react'
-import './MAIN.css'
 import { useState } from 'react'
 import Navbar from './Navbar'
 import Slidebar from './Slidebar'

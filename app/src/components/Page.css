@@ -63,6 +63,9 @@
 .chatbox div {
   justify-content: space-between;
 }
+.custom-card-shadow {
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1), 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft white + subtle dark shadow */
+}
 
 .chatbox:hover {
   background-color: rgba(248, 247, 249, 0.5);
@@ -85,6 +88,9 @@
   background-color: rgba(255 255 255 / 90%);
   box-shadow: 20px 20px 4px 0px #00000040;
   padding: 14px 14px 5px 20px;
+}
+.custom-margin {
+  margin-left: 60px; /* Change to 70px if needed */
 }
 .send {
   position: absolute;

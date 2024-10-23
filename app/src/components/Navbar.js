@@ -9,6 +9,7 @@ export default function Navbar({ bgchange }) {
   const handleLogout = async () => {
     const token = localStorage.getItem('token');
     try {
+      console.log('token', token);
       const response = await axios.post(
         'https://arjuna-uzmq.onrender.com/api/v1/users/logout', // Adjust URL as necessary
         // 'http://localhost:5000/api/v1/users/logout', // Adjust URL as necessary

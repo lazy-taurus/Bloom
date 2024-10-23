@@ -51,7 +51,7 @@ export default function Register() {
   };
 
   return (
-    <div className='container'>
+    <div className='container full-width'>
       <div className='login d-flex flex-column px-5 justify-content-evenly'>
         <p className='loginname fw-bold'>Register</p>
 
@@ -93,7 +93,7 @@ export default function Register() {
         </div>
 
         <div className='d-flex flex-column justify-content-center'>
-          <button className='btn px-5 py-2 fw-bold' onClick={handleSubmit}>
+          <button className='btn1 px-5 py-2 fw-bold' onClick={handleSubmit}>
             Register
           </button>
           <Link className='create' to='/login'>
